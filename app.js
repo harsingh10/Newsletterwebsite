@@ -4,7 +4,7 @@ const app = express();
 const https = require("https")
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static("public"));
-app.listen(process.env.PORT || 3000, ()=>{
+app.listen( process.env.PORT , ()=>{
 
   console.log("server is running on posrt number 3000");
 
@@ -46,7 +46,7 @@ app.post("/", function(req,res){
   const req1 = https.request(url, options , (response) => {
 
 
-      if(response.statusCode == "201")
+      if(response.statusCode == "200")
       {
 
 
